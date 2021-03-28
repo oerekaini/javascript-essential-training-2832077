@@ -12,7 +12,7 @@ class videoGame {
     ) {
         this.title = title;
         this.publisher = publisher;
-        this.platform - platform;
+        this.platform = platform;
         this.releaseDate = releaseDate;
         this.boolComplete = boolComplete;
 

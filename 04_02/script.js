@@ -17,25 +17,54 @@ const everydayPack = new Backpack(
   "December 5, 2018 15:00:00 PST"
 );
 
+console.log("The everydayPack object:", everydayPack);
+console.log("The pocketNum value:", everydayPack.pocketNum);
+console.log("Days since aquired:", everydayPack.backpackAge());
+
+const pokemonRed = new videoGame(
+  "Pokemon Red Version",
+  "Nintendo",
+  "Game Boy",
+  "February 27, 1996",
+  true
+);
+
+console.log("The video game:", pokemonRed);
+console.log("Has", pokemonRed.title,"been completed: ", pokemonRed.boolComplete);
+console.log("Days since realease:", pokemonRed.gameAge());
+
+const pokemonSilver = new videoGame(
+  "Pokemon Silver Version",
+  "Nintendo",
+  "Game Boy Color",
+  "November 21, 1999",
+  true
+);
+
 const content = `
   <main>
     <article>
-      <h1>${everydayPack.name}</h1>
+      <h3>${pokemonRed.title}</h3>
       <ul>
-        <li>Volume: ${everydayPack.volume}</li>
-        <li>Color: ${everydayPack.color}</li>
-        <li>Age: ${everydayPack.backpackAge()}</li>
-        <li>Number of pockets: ${everydayPack.pocketNum}</li>
-        <li>Left strap length: ${everydayPack.strapLength.left}</li>
-        <li>Right strap length: ${everydayPack.strapLength.right}</li>
-        <li>Lid status: ${everydayPack.lidOpen}</li>
+        <li>Publisher: ${pokemonRed.publisher}</li>
+        <li>Platform: ${pokemonRed.platform}</li>
+        <li>Original Release Date: ${pokemonRed.releaseDate}</li>
+        <li>Days since release: ${pokemonRed.gameAge()}</li>
+        <li>Completion Status: ${pokemonRed.boolComplete}</li>
       </ul>
     </article>
+    <article>
+    <h3>${pokemonSilver.title}</h3>
+    <ul>
+      <li>Publisher: ${pokemonSilver.publisher}</li>
+      <li>Platform: ${pokemonSilver.platform}</li>
+      <li>Original Release Date: ${pokemonSilver.releaseDate}</li>
+      <li>Days since release: ${pokemonSilver.gameAge()}</li>
+      <li>Completion Status: ${pokemonSilver.boolComplete}</li>
+    </ul>
+  </article>
   </main>
 `;
 
 document.body.innerHTML = content;
 
-console.log("The everydayPack object:", everydayPack);
-console.log("The pocketNum value:", everydayPack.pocketNum);
-console.log("Days since aquired:", everydayPack.backpackAge());
