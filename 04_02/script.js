@@ -4,6 +4,7 @@
  *
  */
 import Backpack from "./Backpack.js";
+import videoGame from "./videoGame.js";
 
 const everydayPack = new Backpack(
   "Everyday Pack",

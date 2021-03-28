@@ -6,6 +6,7 @@
  */
 
 import Backpack from "./Backpack.js";
+import videoGame from "./videoGame.js";
 
 const everydayPack = new Backpack(
   "Everyday Backpack",
@@ -21,3 +22,15 @@ const everydayPack = new Backpack(
 console.log("The everydayPack object:", everydayPack);
 console.log("The pocketNum value:", everydayPack.pocketNum);
 console.log("Days since aquired:", everydayPack.backpackAge());
+
+const pokemonRed = new videoGame(
+  "Pokemon Red Version",
+  "Nintendo",
+  "Game Boy",
+  "February 27, 1996",
+  true
+);
+
+console.log("The video game:", pokemonRed);
+console.log("Has", pokemonRed.title,"been completed: ", pokemonRed.boolComplete);
+console.log("Days since realease:", pokemonRed.gameAge());
